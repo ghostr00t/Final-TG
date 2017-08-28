@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using HighScores.Models;
+using HighScore.Models;
 
-namespace HighScores
+namespace HighScore
 {
     public partial class Startup
     {

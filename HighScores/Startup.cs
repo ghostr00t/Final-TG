@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(HighScores.Startup))]
-namespace HighScores
+[assembly: OwinStartupAttribute(typeof(HighScore.Startup))]
+namespace HighScore
 {
     public partial class Startup
     {

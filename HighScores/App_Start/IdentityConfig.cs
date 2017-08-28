@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using HighScores.Models;
+using HighScore.Models;
 
-namespace HighScores
+namespace HighScore
 {
     public class EmailService : IIdentityMessageService
     {

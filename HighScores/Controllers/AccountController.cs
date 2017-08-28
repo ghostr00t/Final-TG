@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using HighScores.Models;
+using HighScore.Models;
 
-namespace HighScores.Controllers
+namespace HighScore.Controllers
 {
     [Authorize]
     public class AccountController : Controller

@@ -7,12 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HighScores.Models
+namespace HighScore.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class HighScore
+    public partial class HighScores
     {
         public int Id { get; set; }
         public string Username { get; set; }

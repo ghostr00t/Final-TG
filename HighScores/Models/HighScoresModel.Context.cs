@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HighScores.Models
+namespace HighScore.Models
 {
     using System;
     using System.Data.Entity;
@@ -25,6 +25,6 @@ namespace HighScores.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<HighScore> HighScores { get; set; }
+        public virtual DbSet<HighScores> HighScores { get; set; }
     }
 }

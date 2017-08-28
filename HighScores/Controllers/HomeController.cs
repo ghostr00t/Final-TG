@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace HighScores.Controllers
+namespace HighScore.Controllers
 {
     public class HomeController : Controller
     {

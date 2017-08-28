@@ -1,4 +1,4 @@
-﻿using HighScores.Models;
+﻿using HighScore.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,39 +8,39 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace HighScores.Controllers
+namespace HighScore.Controllers
 {
-    public class HighScoresController : ApiController
+    public class HighScoreController : ApiController
     {
         TravieIOEntities db = new TravieIOEntities();
 
-        //get all customer
+        //get all scores
         [HttpGet]
         public IEnumerable<HighScore> Get()
         {
             return db.HighScores.AsEnumerable();
         }
 
-        //get customer by id
-        public HighScore Get(int id)
+        //get score by id
+        public HighScores Get(int id)
         {
-            HighScore customer = db.HighScores.Find(id);
-            if (customer == null)
+            HighScores highScores = db.HighScores.Find(id);
+            if (highScore == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
             }
-            return customer;
+            return highScore;
         }
 
-        //insert customer
-        public HttpResponseMessage Post(HighScore highScore)
+        //insert score
+        public HttpResponseMessage Post(HighScores highScores)
         {
             if (ModelState.IsValid)
             {
                 db.HighScores.Add(highScore);
                 db.SaveChanges();
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, highScore);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = highScore.Id }));
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, highScores);
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = highScores.Id }));
                 return response;
             }
             else
@@ -49,7 +49,7 @@ namespace HighScores.Controllers
             }
         }
 
-        //update customer
+        //update score
         public HttpResponseMessage Put(int id, HighScore highScore)
         {
             if (!ModelState.IsValid)
@@ -72,10 +72,10 @@ namespace HighScores.Controllers
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        //delete customer by id
+        //delete score by id
         public HttpResponseMessage Delete(int id)
         {
-            HighScore highScore = db.HighScores.Find(id);
+            HighScores highScore = db.HighScores.Find(id);
             if (highScore == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);

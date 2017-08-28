@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace HighScores.Models
+namespace HighScore.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
